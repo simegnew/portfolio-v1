@@ -30,10 +30,10 @@ nav{
 }
 
 #theme__icon{
-   background: transparent;
-   color: white;
-   font-size: 2rem;
-   cursor: pointer; 
+    background: transparent;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer; 
 }
 
 /* HIDE NAV MENU IN TABLETE AND PHONES  */
