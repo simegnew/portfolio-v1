@@ -75,7 +75,7 @@
 
     /*GENERAL SECTION  STYLES */
     a{
-        /* color: var(--color-white); */
+        color: var(--color-white);
         transition: var(--transition);
     }
 
@@ -136,8 +136,9 @@
         transform: translateY(-0.5rem);
     }
 
-    .btn.white {
+    .btn.light{
         background: var(--color-white);
+        color: gray;
     }
 
     .btn.white:hover{
