@@ -66,12 +66,17 @@
 
 /* MEDIA QUERIES (tablets) */
 
-/* @media screen and (max-width:1024px) {
-    .header__container{
-        height: 100vh;
+@media screen and (max-width:1024px) {
+    .header__socials {
+        display: none;
     }
+    
+    .header__container p {
+        width: 100%; 
+    }
+
 }
-*/
+
 
 /* MEDIA QUERIES (tablets) */
 
