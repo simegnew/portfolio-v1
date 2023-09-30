@@ -10,9 +10,11 @@ const Services = () => {
       <div className="services__container">
         {data.map((item) => (
           <Card key={item.id} classsName="services__item">
-            <span>{item.icon}</span>
-            <h5>{item.title}</h5>
-            <small>{item.desc}</small>
+            <span className='service__icon'>{item.icon}</span>
+            <div className='service__card-sec'>
+              <h5>{item.title}</h5>
+              <small>{item.desc}</small>
+            </div>
           </Card>
         ))}
       </div>

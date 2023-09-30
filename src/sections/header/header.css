@@ -1,11 +1,4 @@
- /* header{
-    height: calc(100vw - 10px);
-    display: grid;
-    place-items: center;
-    background: var(--color-white);
-    transition: var(--transition);
-} */
- 
+
 .header__container{
     display: flex;
     flex-direction: column; 
@@ -82,10 +75,7 @@
 
 @media screen and (max-width:600px) {
     .header__profile {
-        width: 14rem;
-        height: 17rem;
-        max-width: 60%;
-        max-height: 45vh;
+       display: none;
     }
 
     .header__container p {
