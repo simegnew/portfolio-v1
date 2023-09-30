@@ -1,0 +1,11 @@
+.services__container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 10px;
+    align-self: center;
+    /* margin: 0 30px; */
+ }
+ .services__item{
+    background: var(--color-light);
+    margin: 20px;
+ }
