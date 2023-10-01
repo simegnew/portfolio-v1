@@ -40,7 +40,23 @@
 .btn.active{
     background: var(--color-primary);
     color: var(--colot-black);
-    
+
+}
+
+/* MEDIA QUERY FOR (tablet)   */
+@media screen and (max-width:1024px){
+    .portfolio__items-1{
+        /* display: grid; */
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+/* MEDIA QUERY FOR (phone)   */
+@media screen and (max-width:768px){
+    .portfolio__items-1{
+        /* display: grid; */
+        grid-template-columns: repeat(1,1fr);
+    }
 }
 
 
