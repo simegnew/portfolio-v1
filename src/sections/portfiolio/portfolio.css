@@ -4,6 +4,11 @@
     padding: 20px;
     margin: 20px;
 }
+
+.portfolio__items{ 
+    display: flex;
+    justify-content: center;
+}
 .single__portfolio{
     margin: 20px;
     /* width: 18rem; */
@@ -23,13 +28,19 @@
 .portfolio__img{
     margin-bottom: 10px;
     border-radius: 5px;
-    width: 10rem;
+    width: 14rem;
     height: 10rem;
     padding: 5px;
 }
 .portfolio__img:hover{
   padding: 0;
   transition: 0.5s;
+}
+
+.btn.active{
+    background: var(--color-primary);
+    color: var(--colot-black);
+    
 }
 
 
