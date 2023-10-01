@@ -43,7 +43,7 @@ button{
 
 .btn.active{
     background: var(--color-primary);
-    color: var(--colot-black);
+    color: var(--color-white);
 
 }
 
@@ -51,6 +51,7 @@ button{
     background: transparent;
     border: 2px solid var(--color-primary);
     transition: 0.5s;
+    color: var(--color-black);
 }
 
 .btn.btnPortfolio{

@@ -4,13 +4,11 @@ import data from './data';
 import Front from './Front';
 import Back from './Backend';
 import './portfolio.css'
-// import portimg from "../../assets/portfolio-1.jpeg";
-// import Backend from './Backend';
-
 
 const Portfolio = () => { 
 
   const [isPressed, setIsPressed] = useState(null);
+  
   let _allPortfolio = null;
   let _frontPortfolio = null;
   let _backPortfolio = null;
@@ -39,25 +37,24 @@ const Portfolio = () => {
       </Card>
     ));
   } else if (isPressed === 'front') {
-   _frontPortfolio = Front.map((item) => (
-     <Card classsName="single__portfolio" key={item.id}>
-       <div className="portfolio__img">
-         <img src={item.image} alt="myproject- images" />
-       </div>
-       <span>{item.title}</span>
-       <small>{item.desc}</small>
-       <div className="portfolio_cta">
-         <a className="btn light btn_portfolio" href={item.demo}>
-           Demo
-         </a>
-         <a className="btn primary" href={item.prolink}>
-           Github
-         </a>
-       </div>
-     </Card>
-   ));
+    _frontPortfolio = Front.map((item) => (
+      <Card classsName="single__portfolio" key={item.id}>
+        <div className="portfolio__img">
+          <img src={item.image} alt="myproject- images" />
+        </div>
+        <span>{item.title}</span>
+        <small>{item.desc}</small>
+        <div className="portfolio_cta">
+          <a className="btn light btn_portfolio" href={item.demo}>
+            Demo
+          </a>
+          <a className="btn primary" href={item.prolink}>
+            Github
+          </a>
+        </div>
+      </Card>
+  ));
   } else {
-
     _backPortfolio = Back.map((item) => (
       <Card classsName="single__portfolio" key={item.id}>
         <div className="portfolio__img">
@@ -77,6 +74,8 @@ const Portfolio = () => {
     ));
     
   }
+
+
     return (
       <section id="portfolio">
         <h2>portfolio</h2>
