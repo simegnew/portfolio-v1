@@ -21,6 +21,10 @@
     /* margin-bottom: 0; */
 }
 
+button{
+    margin-right: 10px;
+}
+
 .btn_portfolio{
     margin-right: 5px;
 }
@@ -41,6 +45,23 @@
     background: var(--color-primary);
     color: var(--colot-black);
 
+}
+
+.btn.active:hover{
+    background: transparent;
+    border: 2px solid var(--color-primary);
+    transition: 0.5s;
+}
+
+.btn.btnPortfolio{
+    background: var(--color-white);
+    color: var(--color-black);
+}
+
+.btn.btnPortfolio:hover{
+   background: transparent;
+   border: 2px solid var(--color-white);
+   transition: 0.5s;
 }
 
 /* MEDIA QUERY FOR (tablet)   */
