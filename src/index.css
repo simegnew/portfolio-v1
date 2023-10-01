@@ -137,11 +137,11 @@
     }
 
     .btn.light{
-        background: var(--color-white);
-        color: gray;
+        background: var(--color-light);
+        color: var(--color-black);
     }
 
-    .btn.white:hover{
+    .btn.light:hover{
         background: transparent;
         border-color: var(--color-white);
     }

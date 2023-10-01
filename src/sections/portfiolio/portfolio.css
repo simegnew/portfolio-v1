@@ -1,0 +1,36 @@
+.portfolio__items-1{
+    display: grid;
+    grid-template-columns: repeat(3,2fr);
+    padding: 20px;
+    margin: 20px;
+}
+.single__portfolio{
+    margin: 20px;
+    /* width: 18rem; */
+    /* height: 20rem; */
+}
+
+.portfolio_cta{
+    display: flex;
+   margin-top: 30px;
+    /* margin-bottom: 0; */
+}
+
+.btn_portfolio{
+    margin-right: 5px;
+}
+
+.portfolio__img{
+    margin-bottom: 10px;
+    border-radius: 5px;
+    width: 10rem;
+    height: 10rem;
+    padding: 5px;
+}
+.portfolio__img:hover{
+  padding: 0;
+  transition: 0.5s;
+}
+
+
+
