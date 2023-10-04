@@ -29,12 +29,13 @@ button{
     margin-right: 5px;
 }
 
-.portfolio__img{
+.portfolio__img img{
     margin-bottom: 10px;
     border-radius: 5px;
-    width: 14rem;
-    height: 10rem;
+    width: 16rem;
+    height: 11rem;
     padding: 5px;
+    align-self: center;
 }
 .portfolio__img:hover{
   padding: 0;
@@ -71,6 +72,9 @@ button{
         /* display: grid; */
         grid-template-columns: repeat(2,1fr);
     }
+    .portfolio__img img{
+        width: 100%;
+    }
 }
 
 /* MEDIA QUERY FOR (phone)   */
@@ -78,6 +82,9 @@ button{
     .portfolio__items-1{
         /* display: grid; */
         grid-template-columns: repeat(1,1fr);
+    }
+     .portfolio__img img{
+        width: 100%;
     }
 }
 

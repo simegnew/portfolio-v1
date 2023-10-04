@@ -92,7 +92,7 @@ const Portfolio = () => {
             Demo
           </a>
           <a
-            className="btn  noopenerprimary" 
+            className="btn primary" 
             href={item.prolink} 
             target="_blank"
             rel="noreferrer noopener"
