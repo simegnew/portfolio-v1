@@ -19,6 +19,8 @@ const Portfolio = () => {
   }
 
   if (isPressed === 'All') {
+
+    
     _allPortfolio = data.map((item) => (
       <Card classsName="single__portfolio" key={item.id}>
         <div className="portfolio__img">
@@ -27,10 +29,18 @@ const Portfolio = () => {
         <span>{item.title}</span>
         <small>{item.desc}</small>
         <div className="portfolio_cta">
-          <a className="btn light btn_portfolio" href={item.demo}>
+          <a
+            className="btn light btn_portfolio"
+            href={item.demo}
+            target="_blank"
+          >
             Demo
           </a>
-          <a className="btn primary" href={item.prolink}>
+          <a 
+            className="btn primary"
+            href={item.prolink}
+            target="_blank"
+          >
             Github
           </a>
         </div>
@@ -45,15 +55,23 @@ const Portfolio = () => {
         <span>{item.title}</span>
         <small>{item.desc}</small>
         <div className="portfolio_cta">
-          <a className="btn light btn_portfolio" href={item.demo}>
+          <a
+            className="btn light btn_portfolio"
+            href={item.demo}
+            target="_blank"
+          >
             Demo
           </a>
-          <a className="btn primary" href={item.prolink}>
+          <a 
+            className="btn primary"
+            href={item.prolink}
+            target="_blank"
+          >
             Github
           </a>
         </div>
       </Card>
-  ));
+    ));
   } else {
     _backPortfolio = Back.map((item) => (
       <Card classsName="single__portfolio" key={item.id}>
@@ -63,10 +81,18 @@ const Portfolio = () => {
         <span>{item.title}</span>
         <small>{item.desc}</small>
         <div className="portfolio_cta">
-          <a className="btn light btn_portfolio" href={item.demo}>
+          <a
+            className="btn light btn_portfolio"
+            href={item.demo}
+            target="_blank"
+          >
             Demo
           </a>
-          <a className="btn primary" href={item.prolink}>
+          <a
+            className="btn primary" 
+            href={item.prolink} 
+            target="_blank"
+          >
             Github
           </a>
         </div>
@@ -113,9 +139,7 @@ const Portfolio = () => {
 
           <div className="portfolio__items-1">
             {_allPortfolio}
-
             {_frontPortfolio}
-
             {_backPortfolio}
           </div>
         </div>

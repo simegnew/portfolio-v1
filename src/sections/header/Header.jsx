@@ -1,9 +1,7 @@
 import './header.css'
 import data from './data'
 import profile from '../../assets/header/abiye (2).jpg'
-
-// import headerProfile from '../../assets/header/logo.png'
-
+ 
 const Header = () => {
   return (
     <header>
