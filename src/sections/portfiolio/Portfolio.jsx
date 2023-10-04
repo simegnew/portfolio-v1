@@ -59,6 +59,7 @@ const Portfolio = () => {
             className="btn light btn_portfolio"
             href={item.demo}
             target="_blank"
+             rel="noreferrer noopener"
           >
             Demo
           </a>
@@ -66,6 +67,7 @@ const Portfolio = () => {
             className="btn primary"
             href={item.prolink}
             target="_blank"
+            rel="noreferrer noopener"
           >
             Github
           </a>
@@ -85,13 +87,15 @@ const Portfolio = () => {
             className="btn light btn_portfolio"
             href={item.demo}
             target="_blank"
+            rel="noreferrer noopener "
           >
             Demo
           </a>
           <a
-            className="btn primary" 
+            className="btn  noopenerprimary" 
             href={item.prolink} 
             target="_blank"
+            rel="noreferrer noopener"
           >
             Github
           </a>
