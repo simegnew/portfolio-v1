@@ -1,16 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import Card from "../../components/Card";
 import data from "./data";
 import "./testimonials.css";
-
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import { EffectCoverflow, Pagination } from "swiper/modules";
+import SwiperCore from "swiper";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-// import "swiper/css/navigation";
+import "swiper/swiper-bundle.css";
 import "swiper/css/effect-fade";
-import { EffectCoverflow, Pagination } from 'swiper/modules'
+
+
+SwiperCore.use([EffectCoverflow, Pagination]);
 
 const Testimonials = () => {
   
@@ -24,7 +26,16 @@ const Testimonials = () => {
         grabCursor={true}
         centeredSlides={true}
         loop={true}
-        slidesPerView={3}
+        // slidesPerView={1}
+        breakpoints={{
+          // Responsive breakpoints
+          768: {
+            slidesPerView: 3, // Number of slides per view for tablets
+          },
+          480: {
+            slidesPerView: 1, // Number of slides per view for phones
+          },
+        }}
         coverflowEffect={{
           rotate: 0,
           stretch: 0,
@@ -38,11 +49,11 @@ const Testimonials = () => {
         {data.map((item) => (
           <SwiperSlide>
             <Card classsName="testimonial_item" key={item.id}>
-              <span>{item.desc}</span>
+              <small>{item.desc}</small>
               <div className="testimonial_image">
                 <img src={item.image} alt="client-image" />
-                <div>
-                  <span>{item.name}</span>
+                <div className="testimonial_content-topic">
+                  <span className="testimonial__name">{item.name}</span>
                   <small>{item.title}</small>
                 </div>
               </div>
@@ -54,7 +65,7 @@ const Testimonials = () => {
           <div className="swiper-pagination"></div>
         </div>
       </Swiper>
-      </section>
+    </section>
   );
 };
 
