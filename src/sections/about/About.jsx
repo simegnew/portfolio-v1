@@ -1,5 +1,5 @@
 import './about.css'
-import aboutImage from '../../assets/header/abiye (2).jpg'
+import aboutImage from '../../assets/header/profile-2 (1).jpg'
 import cv from '../../assets/Abebe.pdf'
 import { BiSolidDownload } from 'react-icons/bi'
 import data from './data'
