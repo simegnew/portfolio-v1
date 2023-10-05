@@ -1,6 +1,6 @@
 import './header.css'
 import data from './data'
-import profile from '../../assets/header/profile-2 (1).jpg'
+import profile from '../../assets/header/profile-1.jpg'
  
 const Header = () => {
   return (

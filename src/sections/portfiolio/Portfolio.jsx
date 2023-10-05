@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Card from '../../components/Card';
 import data from './data';
 import Front from './Front';
@@ -17,6 +17,15 @@ const Portfolio = () => {
   const handleBtnPressed = (category) => {
     setIsPressed(category);
   }
+
+    // useEffect(() => {
+    //   localStorage.setItem("selectedCategory", isPressed);
+    // }, [isPressed]);
+    
+  useEffect(() => {
+    handleBtnPressed();
+  }, []);
+  
 
   if (isPressed === 'All') {
 
@@ -59,7 +68,7 @@ const Portfolio = () => {
             className="btn light btn_portfolio"
             href={item.demo}
             target="_blank"
-             rel="noreferrer noopener"
+            rel="noreferrer noopener"
           >
             Demo
           </a>

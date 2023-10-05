@@ -39,6 +39,22 @@ const data = [
     image:
       "https://0.academia-photos.com/10416941/3640010/4268998/s200_simegnew.tizazu.jpg",
   },
+  {
+    id: 6,
+    name: "abebe",
+    title: "web Developer",
+    desc: "Loneque vel ultrices. Integer eleifend ligula sed rutrum dignissim.",
+    image:
+      "https://0.academia-photos.com/10416941/3640010/4268998/s200_simegnew.tizazu.jpg",
+  },
+  {
+    id: 7,
+    name: "abebe",
+    title: "web Developer",
+    desc: "Loneque vel ultrices. Integer eleifend ligula sed rutrum dignissim.",
+    image:
+      "https://0.academia-photos.com/10416941/3640010/4268998/s200_simegnew.tizazu.jpg",
+  },
 ];
     
 export default data;
