@@ -35,7 +35,7 @@ const Faq = () => {
             <div className="faq__content">
               <span className="faq__question">{item.ques}</span>
               <span onClick={() => handleClick(item.id)} className="faq__icon">
-                {item.id === activeQuestions ? (
+                {activeQuestions.includes(item.id) ? (
                   <AiOutlineMinus />
                 ) : (
                   <AiOutlinePlus />
