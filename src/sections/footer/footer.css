@@ -39,6 +39,12 @@ footer{
     transform: translateY(-0.5rem);
 }
 
+.footer__right{
+    text-align: center;
+    color: var(--color-light);
+    padding-top: 20px;
+}
+
 @media screen and (max-width:600px){
     .footer__content{
         display: grid;

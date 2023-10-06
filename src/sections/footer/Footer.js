@@ -23,6 +23,7 @@ const Footer = () => {
             </SocialIcon>
           ))}
         </div>
+          <p className='footer__right'> 2021 -  {new Date().getFullYear()}, All rights Reserved To Simegnew Tizazu.</p>
       </div>
     </footer>
   );
