@@ -14,13 +14,12 @@ const Footer = () => {
             </li>
           ))}
         </div>
-        <div >
+        <div className=" footer__container">
           {footerData.map((social) => (
             <SocialIcon key={social.id} classsName="footer__container">
-                 <a className="footer__link" href={data.link}>
-                  {social.icon}
-                </a>
-               
+              <a className="footer__link" href={social.link} target="_blank" >
+                {social.icon}
+              </a>
             </SocialIcon>
           ))}
         </div>
