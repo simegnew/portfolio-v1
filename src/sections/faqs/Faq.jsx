@@ -7,9 +7,18 @@ import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 
 const Faq = () => {
  
-  const [activeQuestionId, setActiveQuestionId] = useState(null);
+    const [activeQuestions, setActiveQuestions] = useState([]);
+    const [activeQuestionId, setActiveQuestionId] = useState(null);
+    
     const handleClick = (questionId) => {
-    setActiveQuestionId(questionId === activeQuestionId ? null : questionId);
+      if (activeQuestions.includes(questionId)) {
+        setActiveQuestions(activeQuestions.filter((id) => id !== questionId));
+      } else {
+        setActiveQuestions([...activeQuestions, questionId]);
+      }
+         setActiveQuestionId(
+           questionId === activeQuestionId ? null : questionId
+         );
     };
 
   return (
@@ -24,9 +33,9 @@ const Faq = () => {
         {data.map((item) => (
           <QuestionsComponent key={item.id}>
             <div className="faq__content">
-              <span className='faq__question'>{item.ques}</span>
-              <span onClick={() => handleClick(item.id)}  className="faq__icon">
-                {item.id === activeQuestionId ? (
+              <span className="faq__question">{item.ques}</span>
+              <span onClick={() => handleClick(item.id)} className="faq__icon">
+                {item.id === activeQuestions ? (
                   <AiOutlineMinus />
                 ) : (
                   <AiOutlinePlus />
@@ -34,7 +43,7 @@ const Faq = () => {
               </span>
             </div>
             <div className="faq__answer">
-              {activeQuestionId === item.id && (
+              {activeQuestions.includes(item.id) && (
                 <span key={item.id}>{item.answer}</span>
               )}
             </div>
