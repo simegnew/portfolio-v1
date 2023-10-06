@@ -3,6 +3,8 @@
     grid-template-columns: repeat(2,1fr);
     gap: 12px;
 }
+
+
 .faq__content{
     display: flex;
     flex-direction: row;
@@ -25,4 +27,10 @@
 
 .faq__icon:hover{
    cursor: pointer;
+}
+
+@media screen and (max-width:768px){
+    .faq__items{
+        grid-template-columns: repeat(1,2fr);
+    }
 }
