@@ -38,3 +38,14 @@ footer{
     color: var(--color-black);
     transform: translateY(-0.5rem);
 }
+
+@media screen and (max-width:600px){
+    .footer__content{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .footer__container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
