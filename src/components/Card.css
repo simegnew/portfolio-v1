@@ -27,3 +27,11 @@
         padding: 1.2rem;
     }
 }
+
+.faq{
+    background: var(--color-white);
+    padding: 1rem;
+    border: 2px solid transparent;
+    border-radius: var(--border-radius-1);
+    transition: var(--transition);
+}

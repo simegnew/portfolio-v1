@@ -1,0 +1,28 @@
+.faq__items{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 12px;
+}
+.faq__content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.faq__question{
+    font-size: 13px;
+    font-weight: 600;
+
+}
+.faq__answer{
+    display: flex;
+    font-weight: 300;
+}
+
+.faq__icon{
+    font-size: 15px;
+}
+
+.faq__icon:hover{
+   cursor: pointer;
+}
