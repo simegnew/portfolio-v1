@@ -3,6 +3,7 @@
 .contact__container{
     display: flex;
     justify-content: center;
+    flex-direction: row;
     gap: 12px;
  }
 
@@ -20,12 +21,17 @@
 }
 
  .contact__link:hover{
-         background: transparent;
-        border-color: var(--color-primary);
-        color: var(--color-primary);
-        transform: translateY(-0.5rem);
+    background: transparent;
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    transform: translateY(-0.5rem);
     }
+ 
 
-/* .btn.contact__link:hover{
-    color: var(--color-dark);
-} */
+    @media screen  and (max-width: 600px) {
+        .contact__container{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
