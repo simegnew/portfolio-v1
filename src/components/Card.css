@@ -35,3 +35,10 @@
     border-radius: var(--border-radius-1);
     transition: var(--transition);
 }
+
+/* .footer{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 12px; 
+} */

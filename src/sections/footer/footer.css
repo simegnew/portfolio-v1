@@ -1,0 +1,38 @@
+
+footer{
+    background: var(--color-primary);
+    padding: 20px;
+}
+
+.footer__content{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.footer__container{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 12px;
+ }
+
+.footer__link{
+    text-align: center;
+    background: var(--color-black);
+    width: 40px;
+    height: 40px;
+    color: white;
+    border-radius: 10px;
+    padding: 8px 6px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.footer__link:hover{
+    background: transparent;
+    border-color: var(--color-black);
+    color: var(--color-black);
+    transform: translateY(-0.5rem);
+}

@@ -22,7 +22,7 @@ function App() {
         <Faq />
         <Contact />
         <Footer />
-        <FloatingNav />
+        {/* <FloatingNav /> */}
       </main>
     </>
   );
