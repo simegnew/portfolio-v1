@@ -70,11 +70,21 @@ nav{
 
     .toggler{
         display: flex;
+        font-size: 20px;
+    }
+
+    .toggler:hover{
+        cursor: pointer;
     }
 
     .close{
     display: flex;
-}
+    font-size: 20px;
+ }
+
+ .close:hover{
+    cursor: pointer;
+ }
     
 }
 

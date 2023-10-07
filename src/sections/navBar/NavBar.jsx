@@ -3,6 +3,8 @@ import "./navbar.css";
 import data from "./data";
 import logo from "../../assets/logo/logo.png";
 import { IoIosColorPalette } from "react-icons/io";
+import {FaBars} from 'react-icons/fa'
+import { AiFillCloseCircle } from "react-icons/ai";
 
 const NavBar = () => {
   const [toggle, setToggle] = useState(false);
@@ -21,11 +23,11 @@ const NavBar = () => {
         <div className="toggler__icons">
           {toggle ? (
             <a toggle={toggle} onClick={handleToggle} className="close">
-              close
+              <AiFillCloseCircle />
             </a>
           ) : (
             <a toggle={toggle} onClick={handleToggle} className="toggler">
-              toggler
+              <FaBars />
             </a>
           )}
         </div>
