@@ -41,7 +41,7 @@ const data = [
   },
   {
     id: 6,
-    name: "abebe",
+    name: "simegnew Tizazu",
     title: "web Developer",
     desc: "Loneque vel ultrices. Integer eleifend ligula sed rutrum dignissim.",
     image:
@@ -49,7 +49,7 @@ const data = [
   },
   {
     id: 7,
-    name: "abebe",
+    name: "Abebe Tizazu",
     title: "web Developer",
     desc: "Loneque vel ultrices. Integer eleifend ligula sed rutrum dignissim.",
     image:
