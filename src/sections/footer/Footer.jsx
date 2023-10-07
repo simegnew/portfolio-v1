@@ -5,7 +5,7 @@ import footerData from './footerData';
 
 const Footer = () => {
   return (
-    <footer>
+    <footer >
       <div className="container">
         <div className=" footer__content">
           {data.map((data) => (

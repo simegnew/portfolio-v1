@@ -16,7 +16,7 @@ const NavBar = () => {
 
   return (
     <nav>
-      <div className="container nav__container">
+      <div  className="container nav__container">
         <a href="/" className="nav__logo">
           <img src={logo} alt="logo" />
         </a>

@@ -22,7 +22,7 @@ const Faq = () => {
     };
 
   return (
-    <section id="faqs">
+    <section  id="faqs">
       <h2>Frequently Asked Questions</h2>
       <p>
         Here are some questins i usually get. click to toggle the answer and if

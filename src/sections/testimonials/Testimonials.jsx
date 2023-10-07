@@ -17,7 +17,7 @@ SwiperCore.use([EffectCoverflow, Pagination]);
 const Testimonials = () => {
   
   return (
-    <section className="container" id="testimonials">
+    <section  id="testimonials">
       <h2>What My Clients Say</h2>
       <p>These are unbaised testimonials from some of my clients</p>
 
@@ -44,7 +44,7 @@ const Testimonials = () => {
         }}
         pagination={{ el: ".swiper-pagination", clickable: true }}
         modules={[EffectCoverflow, Pagination]}
-        className="swiper_container"
+        className="swiper_container container"
       >
         {data.map((item) => (
           <SwiperSlide>

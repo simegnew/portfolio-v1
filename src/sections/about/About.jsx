@@ -16,7 +16,7 @@ const About = () => {
         </div>
 
         <div className="about__right">
-          <h2>About Me</h2>
+          <h2 >About Me</h2>
           <div className="about__cards">
             {data.map((item) => (
               <Card key={item.id} classsName="about__card">
