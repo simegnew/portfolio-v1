@@ -1,47 +1,39 @@
-import './navbar.css'
-import data from './data'
-import logo from '../../assets/logo/logo.png'
-import {IoIosColorPalette} from 'react-icons/io'
-import { useState } from 'react'
- 
+import React, { useState } from "react";
+import "./navbar.css";
+import data from "./data";
+import logo from "../../assets/logo/logo.png";
+import { IoIosColorPalette } from "react-icons/io";
+
 const NavBar = () => {
-
   const [toggle, setToggle] = useState(false);
-
 
   const handleToggle = () => {
     setToggle(!toggle);
     console.log(toggle);
-  }
+  };
+
   return (
     <nav>
       <div className="container nav__container">
-        <a href="index.html" className="nav__logo">
+        <a href="/" className="nav__logo">
           <img src={logo} alt="logo" />
         </a>
         <div className="toggler__icons">
           {toggle ? (
-            <a
-              toggle={toggle}
-              onClick={handleToggle}
-              className="close"
-              href="#"
-            >
+            <a toggle={toggle} onClick={handleToggle} className="close">
               close
             </a>
           ) : (
-            <a
-              toggle={toggle}
-              onClick={handleToggle}
-              className="toggler"
-              // href="#"
-            >
+            <a toggle={toggle} onClick={handleToggle} className="toggler">
               toggler
             </a>
           )}
         </div>
-
-        <ul toggle={toggle} onClick={handleToggle} className="nav__menu">
+        <ul
+          toggle={toggle}
+          onClick={handleToggle}
+          className={`nav__menu ${toggle ? "open" : " "}`}
+        >
           {data.map((data) => (
             <li key={data.id}>
               <a href={data.link}>{data.title}</a>
@@ -54,6 +46,6 @@ const NavBar = () => {
       </div>
     </nav>
   );
-}
+};
 
-export default NavBar
+export default NavBar;
