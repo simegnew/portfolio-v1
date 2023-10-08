@@ -4,7 +4,7 @@ import profile from '../../assets/header/profile-1.jpg'
  
 const Header = () => {
   return (
-    <header>
+    <section>
       <div className="container header__container">
         <div className="header__profile">
           <img src={profile} alt="profile" />
@@ -36,7 +36,7 @@ const Header = () => {
           ))}
         </div>
       </div>
-    </header>
+    </section>
   );
 }
 

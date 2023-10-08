@@ -220,7 +220,7 @@
 
     /*========THEME STYLE============*/
     .theme__container{
-        background: var(--color-white);
+        background: #fff;
         position: absolute;
         display: flex;
         flex-direction: column;
@@ -262,6 +262,9 @@
     grid-template-columns: repeat(6,1fr);
     gap: 5px;
   }
+    .theme__primary:hover{
+        cursor: pointer;
+    }
 
   .theme__background{
     display: grid;
@@ -280,4 +283,7 @@
         width: 7rem;
         height: 40px;
         border-radius: 10px;
+    }
+    .background__color:hover{
+        cursor: pointer;
     }
