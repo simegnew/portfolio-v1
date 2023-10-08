@@ -5,18 +5,33 @@ import logo from "../../assets/logo/logo.png";
 import { IoIosColorPalette } from "react-icons/io";
 import {FaBars} from 'react-icons/fa'
 import { AiFillCloseCircle } from "react-icons/ai";
+import Theme from "../../themes/Theme";
 
 const NavBar = () => {
+
+  let _themeSwitcher = null;
+
+
   const [toggle, setToggle] = useState(false);
+  const [theme, setTheme] = useState(false);
 
   const handleToggle = () => {
     setToggle(!toggle);
     console.log(toggle);
   };
 
+  const handleTheme = () => {
+    setTheme(!theme);
+  }
+  
+
+  if (theme) {
+    _themeSwitcher= <Theme />
+  }
+
   return (
     <nav>
-      <div  className="container nav__container">
+      <div className="container nav__container">
         <a href="/" className="nav__logo">
           <img src={logo} alt="logo" />
         </a>
@@ -42,9 +57,10 @@ const NavBar = () => {
             </li>
           ))}
         </ul>
-        <button id="theme__icon">
+        <button onClick={handleTheme} id="theme__icon">
           <IoIosColorPalette />
         </button>
+        {_themeSwitcher}
       </div>
     </nav>
   );
