@@ -7,10 +7,8 @@ import {FaBars} from 'react-icons/fa'
 import { AiFillCloseCircle } from "react-icons/ai";
 import Theme from "../../themes/Theme";
 
-const NavBar = () => {
-
+const NavBar = ({ setPrimaryTheme }) => {
   let _themeSwitcher = null;
-
 
   const [toggle, setToggle] = useState(false);
   const [theme, setTheme] = useState(false);
@@ -22,11 +20,10 @@ const NavBar = () => {
 
   const handleTheme = () => {
     setTheme(!theme);
-  }
-  
+  };
 
   if (theme) {
-    _themeSwitcher= <Theme />
+    _themeSwitcher = <Theme setPrimaryTheme={setPrimaryTheme} />;
   }
 
   return (

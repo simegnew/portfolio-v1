@@ -1,4 +1,4 @@
-
+import {useEffect} from 'react'
 import About from "./sections/about/About";
 import Contact from "./sections/contact/Contact";
 import Faq from "./sections/faqs/Faq";
@@ -12,21 +12,29 @@ import "./index.css";
 
 function App() {
 
+    useEffect(() => {
+      const currentThemeColor = localStorage.getItem("color");
+      setPrimaryTheme(currentThemeColor);
+      // console.log(currentThemeColor);
+    }, []);
+  
+   const setPrimaryTheme = (color) => {
+     document.documentElement.style.setProperty("--color-primary", color);
+  };
+  
+  
+
   return (
     <>
-      <main>
-      
-        <NavBar  />
-        <Header />
-        <About />
-        <Services />
-        <Portfolio />
-        <Testimonials />
-        <Faq />
-        <Contact />
-        <Footer />
-        
-      </main>
+      <NavBar setPrimaryTheme={setPrimaryTheme} />
+      <Header />
+      <About />
+      <Services />
+      <Portfolio />
+      <Testimonials />
+      <Faq />
+      <Contact />
+      <Footer />
     </>
   );
 }

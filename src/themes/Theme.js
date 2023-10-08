@@ -5,37 +5,35 @@ import BackColors from "./BackgroundColors";
 import FontTheme from "./FontTheme";
 import BackGrountTheme from './BackGrountTheme'
 
-const Theme = () => {
+const Theme = ({ setPrimaryTheme }) => {
+  // useEffect(() => {
+  //     const currentThemeColor = localStorage.getItem('color')
+  //     setPrimaryTheme(currentThemeColor);
+  // console.log(currentThemeColor);
 
-    useEffect(() => {
-        const currentThemeColor = localStorage.getItem('color')
-        setPrimaryTheme(currentThemeColor);
-        // console.log(currentThemeColor);
-        
-    }, []);
-    
+  // }, []);
 
-    const setPrimaryTheme = (color) => {
-        document.documentElement.style.setProperty('--color-primary', color);
-    }
+  // const setPrimaryTheme = (color) => {
+  //     document.documentElement.style.setProperty('--color-primary', color);
+  // }
 
-    const setBackgroundTheme = (color) => {
-        document.documentElement.style.setProperty('--color-white', color);
-    }
+  const setBackgroundTheme = (color) => {
+    document.documentElement.style.setProperty("--color-white", color);
+  };
 
-    const setColor = (e) => {
-        const currentColor = e.target.style.getPropertyValue('--color-primary');
-        setPrimaryTheme(currentColor);
-        localStorage.setItem('color', currentColor);
-    }
+  const setColor = (e) => {
+    const currentColor = e.target.style.getPropertyValue("--color-primary");
+    setPrimaryTheme(currentColor);
+    localStorage.setItem("color", currentColor);
+  };
 
-    const setBackGroundColor = (e) => {
-        const currentBackgroundColor = e.target.style.getPropertyValue('--color-white');
-        // console.log(currentBackgroundColor, " current back color");
-        setBackgroundTheme(currentBackgroundColor);
-        localStorage.setItem("backgroundColor", currentBackgroundColor);
-
-    }   
+  const setBackGroundColor = (e) => {
+    const currentBackgroundColor =
+      e.target.style.getPropertyValue("--color-white");
+    // console.log(currentBackgroundColor, " current back color");
+    setBackgroundTheme(currentBackgroundColor);
+    localStorage.setItem("backgroundColor", currentBackgroundColor);
+  };
   return (
     <>
       <div className="theme__container">
@@ -46,7 +44,7 @@ const Theme = () => {
             <h5 className="Theme__text">Primary Color</h5>
             <div className="theme__primary">
               {Colors.map((color, index) => (
-                  <FontTheme key={ index} setColor={setColor} color={color} />
+                <FontTheme key={index} setColor={setColor} color={color} />
               ))}
             </div>
           </div>
@@ -55,9 +53,9 @@ const Theme = () => {
             <div className="theme__background">
               {BackColors.map((color, index) => (
                 <BackGrountTheme
-                    key={index}
-                    setBackGroundColor={setBackGroundColor}
-                    color={color}
+                  key={index}
+                  setBackGroundColor={setBackGroundColor}
+                  color={color}
                 />
               ))}
             </div>
@@ -66,6 +64,6 @@ const Theme = () => {
       </div>
     </>
   );
-}
+};
 
 export default Theme
