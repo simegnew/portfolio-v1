@@ -16,7 +16,7 @@ const Theme = () => {
             <h5 className="Theme__text">Primary Color</h5>
             <div className="theme__primary">
               {Colors.map((color, index) => (
-                <FontTheme />
+                  <FontTheme color={ color} />
               ))}
             </div>
           </div>
@@ -24,7 +24,7 @@ const Theme = () => {
             <h5 className="Theme__text">Background Color</h5>
             <div className="theme__background">
               {BackColors.map((color, index) => (
-                <BackGrountTheme />
+                <BackGrountTheme color={color} />
               ))}
             </div>
           </div>

@@ -220,7 +220,7 @@
 
     /*========THEME STYLE============*/
     .theme__container{
-        background: var(--color-light);
+        background: var(--color-white);
         position: absolute;
         display: flex;
         flex-direction: column;
