@@ -6,16 +6,7 @@ import FontTheme from "./FontTheme";
 import BackGrountTheme from './BackGrountTheme'
 
 const Theme = ({ setPrimaryTheme }) => {
-  // useEffect(() => {
-  //     const currentThemeColor = localStorage.getItem('color')
-  //     setPrimaryTheme(currentThemeColor);
-  // console.log(currentThemeColor);
-
-  // }, []);
-
-  // const setPrimaryTheme = (color) => {
-  //     document.documentElement.style.setProperty('--color-primary', color);
-  // }
+ 
 
   const setBackgroundTheme = (color) => {
     document.documentElement.style.setProperty("--color-white", color);
