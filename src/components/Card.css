@@ -30,7 +30,7 @@
 }
 
 .faq{
-    background: var(--color-white);
+    background: var(--color-light);
     padding: 1rem;
     border: 2px solid transparent;
     border-radius: var(--border-radius-1);

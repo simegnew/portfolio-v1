@@ -16,7 +16,7 @@
         --black-lightness: 15%;
         --dark-lightness:44%;
         --light-lightness:94%;
-        --white-lightness:100%;
+        --white-lightness:100%; /*hsl(270,5%,94%)*/
         --color-primary:hsl(var(--primary-hue),85%,41%);
         --color-white:hsl(0,5%,var(--white-lightness));
         --color-light:hsl(var(--primary-hue),5%,var(--light-lightness));
@@ -77,7 +77,7 @@
 
     /*GENERAL SECTION  STYLES */
     a{
-        color: var(--color-white);
+        color: #fff;
         transition: var(--transition);
     }
 
@@ -146,7 +146,7 @@
 
     .btn.light:hover{
         background: transparent;
-        border-color: var(--color-white);
+        border-color: gray;
     }
 
     .btn.primary{
@@ -220,7 +220,7 @@
 
     /*========THEME STYLE============*/
     .theme__container{
-        background: #F1F1F1;
+        background: #Ffff;
         position: absolute;
         display: flex;
         flex-direction: column;

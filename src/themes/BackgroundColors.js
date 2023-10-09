@@ -1,3 +1,3 @@
-const BackColors = ["#3EC430", "#101010"];
+const BackColors = ["hsl(270,5%,94%)", "gray"];
 
 export default BackColors;

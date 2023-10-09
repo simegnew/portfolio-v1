@@ -5,6 +5,7 @@
 
 .testimonial_item{
     background: var(--color-light);
+    width: 200px;
 }
 .testimonial_item:hover{
     background: transparent;
@@ -36,7 +37,7 @@
 
  
 .swiper_container {
-  height: 200px;
+  height: 250px;
   width: 600px;
   padding: 10px 0;
   position: relative;
