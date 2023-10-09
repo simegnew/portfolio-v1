@@ -14,11 +14,14 @@
 .faq__question{
     font-size: 13px;
     font-weight: 600;
+    color: var(--color-black);
 
 }
 .faq__answer{
     display: flex;
     font-weight: 300;
+    color: var(--color-black);
+
  }
 
 .faq__icon{

@@ -3,11 +3,11 @@ const BackGrountTheme = ({ color, setBackGroundColor }) => (
   <div
     onClick={setBackGroundColor}
     className="background__color"
-    style={{ 
+    style={{
       "--color-white": color,
       "--color-light": "gray",
-      // "gray":"white",
-   }}
+      "--color-black": "--color-white",
+    }}
   ></div>
 );
 

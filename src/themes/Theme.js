@@ -11,7 +11,7 @@ const Theme = ({ setPrimaryTheme }) => {
   const setBackgroundTheme = (color) => {
     document.documentElement.style.setProperty("--color-white", color);
     document.documentElement.style.setProperty("--color-light", "gray");
-    // document.documentElement.style.setProperty("gray", "white");
+    document.documentElement.style.setProperty("--color-black", "--color-white");
   };
 
   const setColor = (e) => {
@@ -26,7 +26,7 @@ const Theme = ({ setPrimaryTheme }) => {
     setBackgroundTheme(currentBackgroundColor);
     localStorage.setItem("backgroundColor", currentBackgroundColor);
     document.documentElement.style.setProperty("--color-light", "gray");
-    // document.documentElement.style.setProperty("gray", "white");
+    document.documentElement.style.setProperty("--color-black", "--color-white");
   };
   return (
     <>
