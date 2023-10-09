@@ -10,6 +10,8 @@ const Theme = ({ setPrimaryTheme }) => {
 
   const setBackgroundTheme = (color) => {
     document.documentElement.style.setProperty("--color-white", color);
+    document.documentElement.style.setProperty("--color-light", "gray");
+    // document.documentElement.style.setProperty("gray", "white");
   };
 
   const setColor = (e) => {
@@ -21,9 +23,10 @@ const Theme = ({ setPrimaryTheme }) => {
   const setBackGroundColor = (e) => {
     const currentBackgroundColor =
       e.target.style.getPropertyValue("--color-white");
-    // console.log(currentBackgroundColor, " current back color");
     setBackgroundTheme(currentBackgroundColor);
     localStorage.setItem("backgroundColor", currentBackgroundColor);
+    document.documentElement.style.setProperty("--color-light", "gray");
+    // document.documentElement.style.setProperty("gray", "white");
   };
   return (
     <>
