@@ -4,6 +4,7 @@
     border: 2px solid transparent;
     border-radius: var(--border-radius-1);
     transition: var(--transition);
+     /* color: var(--color-white); */
 }
 
 .card:hover{
@@ -13,6 +14,10 @@
     /* color: var(--color-white); */
 }
 
+.card.h5{
+    color: var(--color-light);
+}
+
 .card.light{
     background: var(--color-light);
 }
@@ -20,6 +25,7 @@
 .card.light:hover{
     background: transparent;
     border-color: var(--color-light);
+
 }
 
 /* MEDIA QUERIES (phone)*/

@@ -9,6 +9,7 @@
     place-items: center;
     margin-top: 10rem;
     margin-bottom: 4rem;
+    color: var(--color-black);
 }
 
  .header__profile{

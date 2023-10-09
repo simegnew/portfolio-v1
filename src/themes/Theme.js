@@ -10,8 +10,8 @@ const Theme = ({ setPrimaryTheme }) => {
 
   const setBackgroundTheme = (color) => {
     document.documentElement.style.setProperty("--color-white", color);
-    document.documentElement.style.setProperty("--color-light", "gray");
-    document.documentElement.style.setProperty("--color-black", "--color-white");
+    // document.documentElement.style.setProperty("--color-light",color);
+    // document.documentElement.style.setProperty("--color-black","#ffffff");
   };
 
   const setColor = (e) => {
@@ -25,8 +25,8 @@ const Theme = ({ setPrimaryTheme }) => {
       e.target.style.getPropertyValue("--color-white");
     setBackgroundTheme(currentBackgroundColor);
     localStorage.setItem("backgroundColor", currentBackgroundColor);
-    document.documentElement.style.setProperty("--color-light", "gray");
-    document.documentElement.style.setProperty("--color-black", "--color-white");
+    document.documentElement.style.setProperty("--color-light", "#B9BBB6");
+    document.documentElement.style.setProperty("--color-black", "#ffffff");
   };
   return (
     <>
