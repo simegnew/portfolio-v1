@@ -35,7 +35,11 @@ const Theme = ({ setPrimaryTheme }) => {
             <h5 className="Theme__text">Primary Color</h5>
             <div className="theme__primary">
               {Colors.map((color, index) => (
-                <FontTheme key={index} setColor={setColor} color={color} />
+                <FontTheme
+                  key={index}
+                  setColor={setColor}
+                  color={color}
+                />
               ))}
             </div>
           </div>
