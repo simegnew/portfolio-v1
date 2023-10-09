@@ -13,6 +13,9 @@
     margin: 20px;
     /* color: var(--color-white); */
 }
+.portfolio__description{
+    color: var(--color-black);
+}
 
 .portfolio_cta{
     display: flex;

@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <section id="contact">
       <h2>Get In Touch</h2>
-      <p>Shoot me a message via any of the links below.</p>
+      <p className='contact__description'>Shoot me a message via any of the links below.</p>
       <div className="container contact__container ">
         {data.map((item) => (
           <SocialIcon classsName="contact__container">

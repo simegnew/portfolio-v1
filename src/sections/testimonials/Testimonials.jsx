@@ -19,7 +19,7 @@ const Testimonials = () => {
   return (
     <section  id="testimonials">
       <h2>What My Clients Say</h2>
-      <p>These are unbaised testimonials from some of my clients</p>
+      <p className="testimonial__description">These are unbaised testimonials from some of my clients</p>
 
       <Swiper
         spaceBetween={50}

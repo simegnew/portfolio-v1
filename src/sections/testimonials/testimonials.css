@@ -29,6 +29,9 @@
   font-weight: bold;
 }
   
+.testimonial__description{
+  color: var(--color-black);
+}
  
 
 :root {

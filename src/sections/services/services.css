@@ -35,6 +35,10 @@
     margin-left: 10px;
   }
 
+  .service__description{
+    color: var(--color-black);
+  }
+
   /* MEDIA QUERIES (tablets) */
 @media screen and (max-width:1024px) {
     .services__container{

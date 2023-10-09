@@ -118,7 +118,7 @@ const Portfolio = () => {
     return (
       <section id="portfolio">
         <h2>portfolio</h2>
-        <p>
+        <p className='portfolio__description'>
           Check Out some of the projects i recently worked on for my clients.
           use the button s to toggle the different categories.
         </p>

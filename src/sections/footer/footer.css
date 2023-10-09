@@ -8,6 +8,7 @@ footer{
     display: flex;
     justify-content: center;
     gap: 30px;
+    color: var(--color-black);
 }
 
 .footer__container{

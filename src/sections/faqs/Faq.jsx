@@ -22,9 +22,9 @@ const Faq = () => {
     };
 
   return (
-    <section  id="faqs">
+    <section id="faqs">
       <h2>Frequently Asked Questions</h2>
-      <p>
+      <p className="faq__description">
         Here are some questins i usually get. click to toggle the answer and if
         you still have some more questions. shoot me a message from the contact
         section.

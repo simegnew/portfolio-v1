@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import Colors from './Colors'
 import BackColors from "./BackgroundColors";
-
+import './theme.css'
 import FontTheme from "./FontTheme";
 import BackGrountTheme from './BackGrountTheme'
 
@@ -10,8 +10,8 @@ const Theme = ({ setPrimaryTheme }) => {
 
   const setBackgroundTheme = (color) => {
     document.documentElement.style.setProperty("--color-white", color);
-    // document.documentElement.style.setProperty("--color-light",color);
-    // document.documentElement.style.setProperty("--color-black","#ffffff");
+    document.documentElement.style.setProperty("--color-light", "#1F201D");
+    document.documentElement.style.setProperty("--color-black", "#D7D7D8");
   };
 
   const setColor = (e) => {
@@ -25,13 +25,14 @@ const Theme = ({ setPrimaryTheme }) => {
       e.target.style.getPropertyValue("--color-white");
     setBackgroundTheme(currentBackgroundColor);
     localStorage.setItem("backgroundColor", currentBackgroundColor);
-    document.documentElement.style.setProperty("--color-light", "#B9BBB6");
-    document.documentElement.style.setProperty("--color-black", "#ffffff");
+    // document.documentElement.style.setProperty("--color-light", "#B9BBB6");
+    // document.documentElement.style.setProperty("--color-black", "#ffffff");
+    // document.documentElement.style.setProperty("--color-white", "#010101");
   };
   return (
     <>
       <div className="theme__container">
-        <h4>Customize Your Theme</h4>
+        <h4 className='theme_text'>Customize Your Theme</h4>
         <p>Chenge the theme primary and background color to your preference.</p>
         <div className="themes">
           <div>
