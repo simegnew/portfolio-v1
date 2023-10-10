@@ -23,10 +23,9 @@ const Theme = ({ setPrimaryTheme, theme }) => {
       e.target.style.getPropertyValue("--color-white");
     setBackgroundTheme(currentBackgroundColor);
     localStorage.setItem("backgroundColor", currentBackgroundColor);
-    // document.documentElement.style.setProperty("--color-light", "#B9BBB6");
-    // document.documentElement.style.setProperty("--color-black", "#ffffff");
-    // document.documentElement.style.setProperty("--color-white", "#010101");
   };
+
+  
   return (
     <>
       <div className={`theme__container ${theme ? "isOpen " : ""} `}>

@@ -32,7 +32,7 @@ const Faq = () => {
       <div className="container faq__items">
         {data.map((item) => (
           <QuestionsComponent key={item.id}>
-            <div className="faq__content">
+            <div onClick={() => handleClick(item.id)}  className="faq__content">
               <span className="faq__question">{item.ques}</span>
               <span onClick={() => handleClick(item.id)} className="faq__icon">
                 {activeQuestions.includes(item.id) ? (
