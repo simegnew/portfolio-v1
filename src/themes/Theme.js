@@ -1,13 +1,11 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Colors from './Colors'
 import BackColors from "./BackgroundColors";
 import './theme.css'
 import FontTheme from "./FontTheme";
 import BackGrountTheme from './BackGrountTheme'
 
-const Theme = ({ setPrimaryTheme }) => {
- 
-
+const Theme = ({ setPrimaryTheme, theme }) => {
   const setBackgroundTheme = (color) => {
     document.documentElement.style.setProperty("--color-white", color);
     document.documentElement.style.setProperty("--color-light", "#1A2F4B");
@@ -31,19 +29,17 @@ const Theme = ({ setPrimaryTheme }) => {
   };
   return (
     <>
-      <div className="theme__container">
-        <h4 className='theme_text'>Customize Your Theme</h4>
-        <p>Chenge the theme primary and background color to your preference.</p>
+      <div className={`theme__container ${theme ? "isOpen " : ""} `}>
+        <h4 className="theme_text">Customize Your Theme</h4>
+        <p className="theme_text">
+          Chenge the theme primary and background color to your preference.
+        </p>
         <div className="themes">
           <div>
             <h5 className="Theme__text">Primary Color</h5>
             <div className="theme__primary">
               {Colors.map((color, index) => (
-                <FontTheme
-                  key={index}
-                  setColor={setColor}
-                  color={color}
-                />
+                <FontTheme key={index} setColor={setColor} color={color} />
               ))}
             </div>
           </div>

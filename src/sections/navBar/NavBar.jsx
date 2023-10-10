@@ -12,6 +12,13 @@ const NavBar = ({ setPrimaryTheme }) => {
 
   const [toggle, setToggle] = useState(false);
   const [theme, setTheme] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
+
+  //handle for themes
+  const handleIsOpen = () => {
+    setIsOpen(!isOpen);
+  };
 
   const handleToggle = () => {
     setToggle(!toggle);
@@ -20,14 +27,19 @@ const NavBar = ({ setPrimaryTheme }) => {
 
   const handleTheme = () => {
     setTheme(!theme);
+    // handleIsOpen();
   };
 
+  const removeTheme = () => {
+    setTheme(false);
+  }
+
   if (theme) {
-    _themeSwitcher = <Theme setPrimaryTheme={setPrimaryTheme} />;
+    _themeSwitcher = <Theme theme={theme} setPrimaryTheme={setPrimaryTheme} />;
   }
 
   return (
-    <nav>
+    <nav >
       <div className="container nav__container">
         <a href="/" className="nav__logo">
           <img src={logo} alt="logo" />

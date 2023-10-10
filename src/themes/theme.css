@@ -9,13 +9,17 @@
         height: 20rem;
         top: 100%;
         left:30%;
-        right: 0;
+        right: -100px;
         border: 0;
         border-radius: 1rem;
         transform: translate(0,20%);
         transition: var(--transition);
 
     }
+
+     .theme__container.isOpen{
+        right: 0;
+     }
 
     .theme_text{
         color: #000;
