@@ -22,7 +22,7 @@ const Testimonials = () => {
       <p className="testimonial__description">These are unbaised testimonials from some of my clients</p>
 
       <Swiper
-        spaceBetween={50}
+        spaceBetween={10}
         grabCursor={true}
         centeredSlides={true}
         loop={true}

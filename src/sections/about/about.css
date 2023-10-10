@@ -58,9 +58,9 @@
 
 /* MEDIA QUERIES (tablets) */
 @media screen and (max-width:1024px) {
-    .about__left{
+    /* .about__left{
         display: none;
-    }
+    } */
 
     .about__container{
         grid-template-columns: 1fr;

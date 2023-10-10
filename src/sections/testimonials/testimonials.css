@@ -5,7 +5,8 @@
 
 .testimonial_item{
     background: var(--color-light);
-    width: 200px;
+    width: 300px;
+    margin-top: 3rem;
 }
 .testimonial_item:hover{
     background: transparent;
@@ -41,7 +42,7 @@
  
 .swiper_container {
   height: 250px;
-  width: 600px;
+  width:var(--container-width-lg);
   padding: 10px 0;
   position: relative;
   display: flex;
@@ -64,7 +65,7 @@
   position: relative;
   bottom: 15px;
   background: var(--color-light);
-  margin-left: 10rem;
+  margin-left: 18rem;
 }
  
 .swiper-pagination {
@@ -93,6 +94,7 @@
 @media screen and (max-width: 768px) {
   .testimonial_item{
         flex-direction: column;
+        margin-left: 2.5rem;
     }
   .swiper_container {
     height: 250px;
