@@ -5,8 +5,8 @@ const BackGrountTheme = ({ color, setBackGroundColor }) => (
     className="background__color"
     style={{
       "--color-white": color,
-      "--color-light": "#B9BBB6",
-      "--color-black": "#ffffff",
+      // "--color-light": "#2C3333",
+      // "--color-black": "#ffffff",
     }}
   ></div>
 );

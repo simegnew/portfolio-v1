@@ -1,3 +1,3 @@
-const BackColors = ["#222831"];
+const BackColors = ["#0F0F0F"];
 
 export default BackColors;

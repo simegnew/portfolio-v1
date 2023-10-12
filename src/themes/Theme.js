@@ -8,7 +8,7 @@ import BackGrountTheme from './BackGrountTheme'
 const Theme = ({ setPrimaryTheme, theme }) => {
   const setBackgroundTheme = (color) => {
     document.documentElement.style.setProperty("--color-white", color);
-    document.documentElement.style.setProperty("--color-light", "#010101");
+    document.documentElement.style.setProperty("--color-light", "#1F201D");
     document.documentElement.style.setProperty("--color-black", "#D7D7D8");
   };
 

@@ -7,7 +7,7 @@ const Header = () => {
     <section>
       <div className="container header__container">
         <div className="header__profile">
-          <img src={profile} alt="profile" />
+          <img src={profile}   alt="profile" />
         </div>
         <h3>Simegnew Tizazu</h3>
         <p>
