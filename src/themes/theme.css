@@ -70,7 +70,13 @@
     }
  
     .background__color{
-        background-color: var(--color-white);
+        background-color:var(--color-white);
+        width: 7rem;
+        height: 40px;
+        border-radius: 10px;
+    }
+    .background__colors{
+        background-color:#ffff;
         width: 7rem;
         height: 40px;
         border-radius: 10px;

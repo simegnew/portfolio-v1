@@ -5,13 +5,9 @@ import './theme.css'
 import FontTheme from "./FontTheme";
 import BackGrountTheme from './BackGrountTheme'
 
-const Theme = ({ setPrimaryTheme, theme }) => {
-  const setBackgroundTheme = (color) => {
-    document.documentElement.style.setProperty("--color-white", color);
-    document.documentElement.style.setProperty("--color-light", "#1F201D");
-    document.documentElement.style.setProperty("--color-black", "#D7D7D8");
-  };
-
+const Theme = ({ setPrimaryTheme, theme, setBackgroundTheme }) => {
+  const [isDark, setIsDark] = useState(false);
+   
   const setColor = (e) => {
     const currentColor = e.target.style.getPropertyValue("--color-primary");
     setPrimaryTheme(currentColor);
@@ -19,13 +15,23 @@ const Theme = ({ setPrimaryTheme, theme }) => {
   };
 
   const setBackGroundColor = (e) => {
-    const currentBackgroundColor =
-      e.target.style.getPropertyValue("--color-white");
+
+    const currentBackgroundColor = e.target.style.getPropertyValue("--color-white");
     setBackgroundTheme(currentBackgroundColor);
     localStorage.setItem("backgroundColor", currentBackgroundColor);
+     
   };
 
+
+  //  const resetTheme = () => {
+  //    setPrimaryTheme("");
+  //    setBackgroundTheme("");
+  //    localStorage.removeItem("color");
+  //    localStorage.removeItem("backgroundColor");
+  // };
   
+
+
   return (
     <>
       <div className={`theme__container ${theme ? "isOpen " : ""} `}>
@@ -45,13 +51,15 @@ const Theme = ({ setPrimaryTheme, theme }) => {
           <div>
             <h5 className="Theme__text">Background Color</h5>
             <div className="theme__background">
-              {BackColors.map((color, index) => (
+              {/* {BackColors.map((color, index) => (
                 <BackGrountTheme
                   key={index}
                   setBackGroundColor={setBackGroundColor}
                   color={color}
                 />
-              ))}
+              ))} */}
+
+              <p onClick={isDark ? (e) =>setBackGroundColor(e) : setIsDark(!isDark)}>night Mode</p>
             </div>
           </div>
         </div>

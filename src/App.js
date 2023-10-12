@@ -15,18 +15,30 @@ function App() {
     useEffect(() => {
       const currentThemeColor = localStorage.getItem("color");
       setPrimaryTheme(currentThemeColor);
-      // console.log(currentThemeColor);
+
+      const currentBackgroundColor = localStorage.getItem("backgroundColor");
+      console.log(currentBackgroundColor);
+      // setBackgroundTheme(currentBackgroundColor);
     }, []);
   
    const setPrimaryTheme = (color) => {
      document.documentElement.style.setProperty("--color-primary", color);
   };
+
+  const setBackgroundTheme = (color) => {
+    document.documentElement.style.setProperty("--color-white", "#0F0F0F");
+    document.documentElement.style.setProperty("--color-light", "#1F201D");
+    document.documentElement.style.setProperty("--color-black", "#D7D7D8");
+   };
   
   
 
   return (
     <>
-      <NavBar setPrimaryTheme={setPrimaryTheme} />
+      <NavBar
+        setPrimaryTheme={setPrimaryTheme}
+        setBackgroundTheme={setBackgroundTheme}
+      />
       <Header />
       <About />
       <Services />
