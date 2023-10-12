@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Card from '../../components/Card';
 import data from './data';
 import Front from './Front';
@@ -24,20 +26,30 @@ const Portfolio = () => {
     
   useEffect(() => {
     handleBtnPressed();
+     AOS.init({ duration: 3000 });
   }, []);
+
+    // useEffect(() => {
+    //   AOS.init({ duration: 3000 });
+    // }, []);
   
 
   if (isPressed === 'All') {
 
     
     _allPortfolio = data.map((item) => (
-      <Card classsName="single__portfolio" key={item.id}>
-        <div className="portfolio__img">
+      <Card   data-aos="fade-up"
+            data-aos-duration="3000" classsName="single__portfolio" key={item.id}>
+        <div  data-aos="fade-up"
+            data-aos-duration="3000"   className="portfolio__img">
           <img src={item.image} alt="myproject- images" />
         </div>
-        <span>{item.title}</span>
-        <small>{item.desc}</small>
-        <div className="portfolio_cta">
+        <span data-aos="fade-up"
+            data-aos-duration="3000"  >{item.title}</span>
+        <small data-aos="fade-up"
+            data-aos-duration="3000"  >{item.desc}</small>
+        <div data-aos="fade-up"
+            data-aos-duration="3000"   className="portfolio_cta">
           <a
             className="btn light btn_portfolio"
             href={item.demo}
@@ -57,7 +69,8 @@ const Portfolio = () => {
     ));
   } else if (isPressed === 'front') {
     _frontPortfolio = Front.map((item) => (
-      <Card classsName="single__portfolio" key={item.id}>
+      <Card  data-aos="fade-up"
+            data-aos-duration="3000" classsName="single__portfolio" key={item.id}>
         <div className="portfolio__img">
           <img src={item.image} alt="myproject- images" />
         </div>
@@ -85,7 +98,8 @@ const Portfolio = () => {
     ));
   } else {
     _backPortfolio = Back.map((item) => (
-      <Card classsName="single__portfolio" key={item.id}>
+      <Card  data-aos="fade-up"
+            data-aos-duration="3000" classsName="single__portfolio" key={item.id}>
         <div className="portfolio__img">
           <img src={item.image} alt="myproject- images" />
         </div>
@@ -117,12 +131,15 @@ const Portfolio = () => {
 
     return (
       <section id="portfolio">
-        <h2>portfolio</h2>
-        <p className='portfolio__description'>
+        <h2  data-aos="fade-up"
+            data-aos-duration="3000">portfolio</h2>
+        <p  data-aos="fade-up"
+            data-aos-duration="3000" className='portfolio__description'>
           Check Out some of the projects i recently worked on for my clients.
           use the button s to toggle the different categories.
         </p>
-        <div className=" container">
+        <div  data-aos="fade-up"
+            data-aos-duration="3000" className=" container">
           <div className="portfolio__items">
             <button
               className={`btn ${

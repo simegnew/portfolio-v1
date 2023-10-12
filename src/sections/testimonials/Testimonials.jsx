@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect} from "react";
 import Card from "../../components/Card";
 import data from "./data";
 import "./testimonials.css";
@@ -10,16 +10,29 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/swiper-bundle.css";
 import "swiper/css/effect-fade";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 SwiperCore.use([EffectCoverflow, Pagination]);
 
 const Testimonials = () => {
+
+    useEffect(() => {
+      AOS.init({ duration: 3000 });
+    }, []);
   
   return (
-    <section  id="testimonials">
-      <h2>What My Clients Say</h2>
-      <p className="testimonial__description">These are unbaised testimonials from some of my clients</p>
+    <section id="testimonials">
+      <h2 data-aos="fade-up" data-aos-duration="3000">
+        What My Clients Say
+      </h2>
+      <p
+        data-aos="fade-up"
+        data-aos-duration="3000"
+        className="testimonial__description"
+      >
+        These are unbaised testimonials from some of my clients
+      </p>
 
       <Swiper
         spaceBetween={10}
@@ -45,10 +58,17 @@ const Testimonials = () => {
         pagination={{ el: ".swiper-pagination", clickable: true }}
         modules={[EffectCoverflow, Pagination]}
         className="swiper_container container"
+        data-aos="fade-up"
+        data-aos-duration="3000"
       >
         {data.map((item) => (
           <SwiperSlide>
-            <Card classsName="testimonial_item" key={item.id}>
+            <Card
+              data-aos="fade-up"
+              data-aos-duration="3000"
+              classsName="testimonial_item"
+              key={item.id}
+            >
               <small>{item.desc}</small>
               <div className="testimonial_image">
                 <img src={item.image} alt="client-image" />
@@ -61,7 +81,11 @@ const Testimonials = () => {
           </SwiperSlide>
         ))}
 
-        <div className="slider-controler">
+        <div
+          data-aos="fade-up"
+          data-aos-duration="3000"
+          className="slider-controler"
+        >
           <div className="swiper-pagination"></div>
         </div>
       </Swiper>
