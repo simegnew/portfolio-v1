@@ -4,11 +4,11 @@ import BackColors from "./BackgroundColors";
 import './theme.css'
 import FontTheme from "./FontTheme";
 import BackGrountTheme from './BackGrountTheme'
-import DarkMode from '../DarkMode/DarkMode';
+import DarkMode from './DarkMode/DarkMode';
 
 const Theme = ({ setPrimaryTheme, theme, setBackgroundTheme }) => {
-  // const [isDark, setIsDark] = useState(false);
-   
+  const [isPressed, setIsPressed] = useState(false);
+    
    const setDarkMode = () => {
       document.querySelector("body").setAttribute("data-theme", "light");
       document.documentElement.style.setProperty("--color-white", "#0F0F0F");
@@ -21,8 +21,14 @@ const Theme = ({ setPrimaryTheme, theme, setBackgroundTheme }) => {
    };
 
    const toggleTheme = (e) => {
-     if (e.target.checked) setDarkMode();
-     else setLightMode();
+     if (e.target.checked) {
+       setDarkMode();
+       setIsPressed(!isPressed);
+     }
+     else {
+       setLightMode();
+       setIsPressed(!isPressed);
+     }
    };
     
   
@@ -78,7 +84,7 @@ const Theme = ({ setPrimaryTheme, theme, setBackgroundTheme }) => {
               ))} */}
 
               {/* <p>night Mode</p> */}
-              <DarkMode toggleTheme={toggleTheme} />
+              <DarkMode isPressed={isPressed} toggleTheme={toggleTheme} />
             </div>
           </div>
         </div>
