@@ -4,23 +4,41 @@ import BackColors from "./BackgroundColors";
 import './theme.css'
 import FontTheme from "./FontTheme";
 import BackGrountTheme from './BackGrountTheme'
+import DarkMode from '../DarkMode/DarkMode';
 
 const Theme = ({ setPrimaryTheme, theme, setBackgroundTheme }) => {
-  const [isDark, setIsDark] = useState(false);
+  // const [isDark, setIsDark] = useState(false);
    
+   const setDarkMode = () => {
+      document.querySelector("body").setAttribute("data-theme", "light");
+      document.documentElement.style.setProperty("--color-white", "#0F0F0F");
+      document.documentElement.style.setProperty("--color-light", "#1F201D");
+      document.documentElement.style.setProperty("--color-black", "#D7D7D8");
+   };
+
+   const setLightMode = () => {
+     document.querySelector("body").setAttribute("data-theme", "dark");
+   };
+
+   const toggleTheme = (e) => {
+     if (e.target.checked) setDarkMode();
+     else setLightMode();
+   };
+    
+  
   const setColor = (e) => {
     const currentColor = e.target.style.getPropertyValue("--color-primary");
     setPrimaryTheme(currentColor);
     localStorage.setItem("color", currentColor);
   };
 
-  const setBackGroundColor = (e) => {
+  // const setBackGroundColor = (e) => {
 
-    const currentBackgroundColor = e.target.style.getPropertyValue("--color-white");
-    setBackgroundTheme(currentBackgroundColor);
-    localStorage.setItem("backgroundColor", currentBackgroundColor);
+  //   const currentBackgroundColor = e.target.style.getPropertyValue("--color-white");
+  //   setBackgroundTheme(currentBackgroundColor);
+  //   localStorage.setItem("backgroundColor", currentBackgroundColor);
      
-  };
+  // };
 
 
   //  const resetTheme = () => {
@@ -59,7 +77,8 @@ const Theme = ({ setPrimaryTheme, theme, setBackgroundTheme }) => {
                 />
               ))} */}
 
-              <p onClick={isDark ? (e) =>setBackGroundColor(e) : setIsDark(!isDark)}>night Mode</p>
+              {/* <p>night Mode</p> */}
+              <DarkMode toggleTheme={toggleTheme} />
             </div>
           </div>
         </div>

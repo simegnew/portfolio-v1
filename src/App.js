@@ -9,6 +9,7 @@ import Portfolio from "./sections/portfiolio/Portfolio";
 import Services from "./sections/services/Services";
 import Testimonials from "./sections/testimonials/Testimonials";
 import "./index.css";
+import DarkMode from './DarkMode/DarkMode';
 
 function App() {
 
@@ -37,7 +38,7 @@ function App() {
     <>
       <NavBar
         setPrimaryTheme={setPrimaryTheme}
-        setBackgroundTheme={setBackgroundTheme}
+        // setBackgroundTheme={setBackgroundTheme}
       />
       <Header />
       <About />

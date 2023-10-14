@@ -4,6 +4,7 @@ import profile from "../../assets/header/profile-1.jpg";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
+import DarkMode from '../../DarkMode/DarkMode';
  
 const Header = () => {
 

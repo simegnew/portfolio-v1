@@ -36,6 +36,12 @@
         --transition: all 500ms ease;
     }
 
+    [data-theme = "dark"] {
+        --color-black:"#D7D7D8";
+        --color-light: "#1F201D",;
+        --color-white: "#0F0F0F";
+    }
+
     html{
         scroll-behavior: smooth;
     }
