@@ -35,16 +35,13 @@ const Header = () => {
           className="header__cta"
         >
           <a
-            data-aos="fade-up"
-            data-aos-duration="3000"
             href="#contact"
             className="btn primary"
           >
             Let's Talk
           </a>
           <a
-            data-aos="fade-up"
-            data-aos-duration="3000"
+            
             href="#portfolio"
             className="btn light"
           >
@@ -58,8 +55,6 @@ const Header = () => {
         >
           {data.map((item) => (
             <a
-              data-aos="fade-up"
-              data-aos-duration="3000"
               key={item.id}
               target="_blanck"
               href={item.link}

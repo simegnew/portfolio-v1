@@ -1,36 +1,10 @@
-import React, { useEffect, useState } from 'react'
 import Colors from './Colors'
 import BackColors from "./BackgroundColors";
 import './theme.css'
 import FontTheme from "./FontTheme";
 import BackGrountTheme from './BackGrountTheme'
-import DarkMode from './DarkMode/DarkMode';
-
+ 
 const Theme = ({ setPrimaryTheme, theme, setBackgroundTheme }) => {
-  const [isPressed, setIsPressed] = useState(false);
-    
-   const setDarkMode = () => {
-      document.querySelector("body").setAttribute("data-theme", "light");
-      document.documentElement.style.setProperty("--color-white", "#0F0F0F");
-      document.documentElement.style.setProperty("--color-light", "#1F201D");
-      document.documentElement.style.setProperty("--color-black", "#D7D7D8");
-   };
-
-   const setLightMode = () => {
-     document.querySelector("body").setAttribute("data-theme", "dark");
-   };
-
-   const toggleTheme = (e) => {
-     if (e.target.checked) {
-       setDarkMode();
-       setIsPressed(!isPressed);
-     }
-     else {
-       setLightMode();
-       setIsPressed(!isPressed);
-     }
-   };
-    
   
   const setColor = (e) => {
     const currentColor = e.target.style.getPropertyValue("--color-primary");
@@ -38,21 +12,13 @@ const Theme = ({ setPrimaryTheme, theme, setBackgroundTheme }) => {
     localStorage.setItem("color", currentColor);
   };
 
-  // const setBackGroundColor = (e) => {
+  const setBackGroundColor = (e) => {
+    const currentBackgroundColor = e.target.style.getPropertyValue("--color-white");
+    setBackgroundTheme(currentBackgroundColor);
+    localStorage.setItem("backgroundColor", currentBackgroundColor);
+  };
 
-  //   const currentBackgroundColor = e.target.style.getPropertyValue("--color-white");
-  //   setBackgroundTheme(currentBackgroundColor);
-  //   localStorage.setItem("backgroundColor", currentBackgroundColor);
-     
-  // };
-
-
-  //  const resetTheme = () => {
-  //    setPrimaryTheme("");
-  //    setBackgroundTheme("");
-  //    localStorage.removeItem("color");
-  //    localStorage.removeItem("backgroundColor");
-  // };
+ 
   
 
 
@@ -75,16 +41,13 @@ const Theme = ({ setPrimaryTheme, theme, setBackgroundTheme }) => {
           <div>
             <h5 className="Theme__text">Background Color</h5>
             <div className="theme__background">
-              {/* {BackColors.map((color, index) => (
+              {BackColors.map((color, index) => (
                 <BackGrountTheme
                   key={index}
                   setBackGroundColor={setBackGroundColor}
                   color={color}
                 />
-              ))} */}
-
-              {/* <p>night Mode</p> */}
-              <DarkMode isPressed={isPressed} toggleTheme={toggleTheme} />
+              ))}
             </div>
           </div>
         </div>

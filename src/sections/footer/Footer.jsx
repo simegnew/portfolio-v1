@@ -39,11 +39,10 @@ const Footer = () => {
               classsName="footer__container"
             >
               <a
-                data-aos="fade-up"
-                data-aos-duration="3000"
                 className="footer__link"
                 href={social.link}
                 target="_blank"
+                rel="noreferrer noopener"
               >
                 {social.icon}
               </a>

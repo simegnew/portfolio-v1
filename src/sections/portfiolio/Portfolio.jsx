@@ -38,29 +38,43 @@ const Portfolio = () => {
 
     
     _allPortfolio = data.map((item) => (
-      <Card   data-aos="fade-up"
-            data-aos-duration="3000" classsName="single__portfolio" key={item.id}>
-        <div  data-aos="fade-up"
-            data-aos-duration="3000"   className="portfolio__img">
+      <Card
+        data-aos="fade-up"
+        data-aos-duration="3000"
+        classsName="single__portfolio"
+        key={item.id}
+      >
+        <div
+          data-aos="fade-up"
+          data-aos-duration="3000"
+          className="portfolio__img"
+        >
           <img src={item.image} alt="myproject- images" />
         </div>
-        <span data-aos="fade-up"
-            data-aos-duration="3000"  >{item.title}</span>
-        <small data-aos="fade-up"
-            data-aos-duration="3000"  >{item.desc}</small>
-        <div data-aos="fade-up"
-            data-aos-duration="3000"   className="portfolio_cta">
+        <span data-aos="fade-up" data-aos-duration="3000">
+          {item.title}
+        </span>
+        <small data-aos="fade-up" data-aos-duration="3000">
+          {item.desc}
+        </small>
+        <div
+          data-aos="fade-up"
+          data-aos-duration="3000"
+          className="portfolio_cta"
+        >
           <a
-            className="btn light btn_portfolio"
+            className="btn light"
             href={item.demo}
             target="_blank"
+            rel="noreferrer noopener"
           >
             Demo
           </a>
-          <a 
+          <a
             className="btn primary"
             href={item.prolink}
             target="_blank"
+            rel="noreferrer noopener"
           >
             Github
           </a>

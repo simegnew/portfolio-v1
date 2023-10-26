@@ -39,10 +39,8 @@ const Testimonials = () => {
         grabCursor={true}
         centeredSlides={true}
         loop={true}
-        // slidesPerView={1}
-        breakpoints={{
-          // Responsive breakpoints
-          768: {
+         breakpoints={{
+           768: {
             slidesPerView: 3, // Number of slides per view for tablets
           },
           480: {
@@ -71,7 +69,7 @@ const Testimonials = () => {
             >
               <small>{item.desc}</small>
               <div className="testimonial_image">
-                <img src={item.image} alt="client-image" />
+                <img src={item.image} alt="client-profile" />
                 <div className="testimonial_content-topic">
                   <span className="testimonial__name">{item.name}</span>
                   <small>{item.title}</small>

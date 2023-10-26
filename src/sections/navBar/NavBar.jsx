@@ -7,19 +7,17 @@ import {FaBars} from 'react-icons/fa'
 import { AiFillCloseCircle } from "react-icons/ai";
 import Theme from "../../themes/Theme";
 
-const NavBar = ({ setPrimaryTheme, setBackgroundTheme }) => {
-  
+const NavBar = ({
+  setPrimaryTheme,
+  setBackgroundTheme,
+  setDarkMode,
+  setLightMode,
+}) => {
   let _themeSwitcher = null;
 
   const [toggle, setToggle] = useState(false);
   const [theme, setTheme] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
-
-  //handle for themes
-  const handleIsOpen = () => {
-    setIsOpen(!isOpen);
-  };
-
+  
   const handleToggle = () => {
     setToggle(!toggle);
     console.log(toggle);
@@ -30,16 +28,14 @@ const NavBar = ({ setPrimaryTheme, setBackgroundTheme }) => {
     // handleIsOpen();
   };
 
-  const removeTheme = () => {
-    setTheme(false);
-  };
-
   if (theme) {
     _themeSwitcher = (
       <Theme
         theme={theme}
         setPrimaryTheme={setPrimaryTheme}
         setBackgroundTheme={setBackgroundTheme}
+        setDarkMode={setDarkMode}
+        setLightMode={setLightMode}
       />
     );
   }
@@ -52,13 +48,13 @@ const NavBar = ({ setPrimaryTheme, setBackgroundTheme }) => {
         </a>
         <div className="toggler__icons">
           {toggle ? (
-            <a toggle={toggle} onClick={handleToggle} className="close">
+            <p toggle={toggle} onClick={handleToggle} className="close">
               <AiFillCloseCircle />
-            </a>
+            </p>
           ) : (
-            <a toggle={toggle} onClick={handleToggle} className="toggler">
+            <p  toggle={toggle} onClick={handleToggle} className="toggler">
               <FaBars />
-            </a>
+            </p>
           )}
         </div>
         <ul

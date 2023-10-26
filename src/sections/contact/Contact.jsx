@@ -24,7 +24,11 @@ const Contact = () => {
       >
         Shoot me a message via any of the links below.
       </p>
-      <div className="container contact__container ">
+      <div
+        data-aos="fade-up"
+        data-aos-duration="3000"
+        className="container contact__container "
+      >
         {data.map((item) => (
           <SocialIcon
             data-aos="fade-up"
@@ -32,11 +36,10 @@ const Contact = () => {
             classsName="contact__container"
           >
             <a
-              data-aos="fade-up"
-              data-aos-duration="3000"
               className="contact__link"
               href={item.link}
               target="_blank"
+              rel="noreferrer noopener"
             >
               {item.icon}
             </a>

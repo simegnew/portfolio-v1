@@ -1,4 +1,3 @@
-import portfolio from '../../assets/portfolio/portfolio-1.jpeg' 
 const Front = [
    {
      id: 1,

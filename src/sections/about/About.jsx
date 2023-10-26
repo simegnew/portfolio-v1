@@ -10,9 +10,9 @@ import { useEffect } from 'react'
 
 const About = () => {
 
-     useEffect(() => {
-       AOS.init({ duration: 3000 });
-     }, []);
+    useEffect(() => {
+      AOS.init({ duration: 3000 });
+    }, []);
   
   return (
     <section id="about">
@@ -23,7 +23,7 @@ const About = () => {
           className="about__left"
         >
           <div className="about__portrait">
-            <img src={aboutImage} alt="about Image" />
+            <img src={aboutImage} alt="about-profile" />
           </div>
         </div>
 
@@ -60,8 +60,6 @@ const About = () => {
             ad culpa qui officia deserunt mollit anim id est laborum.
           </p>
           <a
-            data-aos="fade-up"
-            data-aos-duration="3000"
             href={cv}
             download
             className="btn primary"
