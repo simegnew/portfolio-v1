@@ -16,7 +16,7 @@ function App() {
       const currentThemeColor = localStorage.getItem("color");
       setPrimaryTheme(currentThemeColor);
       const currentBackgroundColor = localStorage.getItem("backgroundColor");
-      setBackgroundTheme(currentBackgroundColor);
+      // setBackgroundTheme(currentBackgroundColor);
     }, []);
   
    const setPrimaryTheme = (color) => {
@@ -25,7 +25,7 @@ function App() {
   
 
   const setBackgroundTheme = (color) => {
-    document.documentElement.style.setProperty("--color-white", color);
+    document.documentElement.style.setProperty("--color-white", "#0F0F0F");
     document.documentElement.style.setProperty("--color-light", "#1F201D");
     document.documentElement.style.setProperty("--color-black", "#D7D7D8");
    };

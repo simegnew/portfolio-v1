@@ -82,7 +82,7 @@
     }
  
     .background__color{
-        background-color:var(--color-white);
+        background-color:#0F0F0F;
         width: 7rem;
         height: 40px;
         border-radius: 10px;

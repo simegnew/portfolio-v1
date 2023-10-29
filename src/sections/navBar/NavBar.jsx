@@ -17,7 +17,7 @@ const NavBar = ({
 
   const [toggle, setToggle] = useState(false);
   const [theme, setTheme] = useState(false);
-  
+
   const handleToggle = () => {
     setToggle(!toggle);
     console.log(toggle);
@@ -64,7 +64,7 @@ const NavBar = ({
         >
           {data.map((data) => (
             <li key={data.id}>
-              <a href={data.link}>{data.title}</a>
+              <aL href={data.link}>{data.title}</aL>
             </li>
           ))}
         </ul>
