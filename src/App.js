@@ -15,7 +15,7 @@ function App() {
     useEffect(() => {
       const currentThemeColor = localStorage.getItem("color");
       setPrimaryTheme(currentThemeColor);
-      const currentBackgroundColor = localStorage.getItem("backgroundColor");
+      // const currentBackgroundColor = localStorage.getItem("backgroundColor");
       // setBackgroundTheme(currentBackgroundColor);
     }, []);
   
